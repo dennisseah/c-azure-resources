@@ -2,22 +2,19 @@
 
 ## Setup
 
-Create a file, `config.properties` with this content
+export environment variables
 
 ```
-subscription=<subscription id>
-client=<service-principal-id>
-tenant=<tenant-id>
-key=<service-principal-secret>
-managementURI=https\://management.core.windows.net/
-baseURL=https\://management.azure.com/
-authURL=https\://login.microsoftonline.com/
-graphURL=https\://graph.windows.net/
+export API_SUBSCRIPTION_ID="<subscription id>"
+export API_TENANT="<tenant id>"
+export API_CLIENT="<service principal id>"
+export API_CLIENT_KEY="<service principal secret>"
 ```
 
-export
+## Test
 
 ```
-AZURE_AUTH_LOCATION=path where the config.properties is located
-SUBSCRIPTION_ID=subscription id
+dotnet test
 ```
+
+The tests illustrate how the API can be consumed.
